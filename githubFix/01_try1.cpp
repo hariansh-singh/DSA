@@ -12,6 +12,8 @@ int main() {
     int b;
     cin>> b; 
 
+    cout << "Printing result" << endl; 
+
     cout << sum (a, b); 
 
     return 0;
