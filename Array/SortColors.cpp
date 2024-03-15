@@ -24,7 +24,7 @@ public:
 
             else {
                 swap(nums[white], nums[blue]);
-                blue--;
+                blue--;             
             }
         }
     }
