@@ -12,11 +12,11 @@ int main() {
     int cols = 3;    
     
     for(int i=0; i<rows; i++) {
-        int count = 0;
+        int sum = 0;
         for(int j=0; j<cols; j++) {
-            count += arr[i][j];
+            sum += arr[i][j];
         }
-        cout << "Sum of row " << i+1 << ": " << count << endl;
+        cout << "Sum of row " << i+1 << ": " << sum << endl;
     }
         cout << endl;
 
