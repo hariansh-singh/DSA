@@ -16,7 +16,7 @@ void findmissing(int *a, int n) {
         if (a[i] > 0) {
             cout << i + 1 << " ";
         }
-    }
+    }   
     cout << endl;
 }
 
