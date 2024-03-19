@@ -34,7 +34,7 @@ int BinarySearch(vector <int> arr, int n) {
 
 int main() {
 
-    vector <int> arr = {1,6,8,4,2,15,84,23,10};
+    vector <int> arr = {1,1,6,8,4,2,15,84,4,4,23,10};
 
     sort(arr.begin(), arr.end());
 
