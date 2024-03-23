@@ -32,7 +32,23 @@ int main() {
     cin >> n;
 
     int ans = sqrt(n);
-    cout << "Answer is: " << ans; 
+    cout << "Answer is: " << ans << endl; 
+
+    int precision;
+    cout << "Enter the number of floating digits in precision: ";
+    cin >> precision;
+
+    double step = 0.1;
+    double final_ans = ans;
+    
+    for(int i=0; i<precision; i++) {
+        for(double j=final_ans; j*j < n; j += step) {
+            final_ans = j;
+        }
+        step /= 10;
+    }
+
+    cout << "Answer with precision is: " << final_ans << endl;
 
     return 0;
 }
