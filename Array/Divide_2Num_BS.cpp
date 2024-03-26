@@ -3,16 +3,16 @@ using namespace std;
 
 int divide(int dividend, int divisor) {
     int start = 0;
-    int end = dividend;
+    int end = abs(dividend);
     int ans = 0;
 
     while(start <= end) {
         int mid = start + (end - start) / 2;
 
-        if(mid * divisor == dividend) {
+        if(abs(mid * divisor) == abs(dividend)) {
             return mid;
         }
-        else if(mid * divisor > dividend) {
+        else if(abs(mid * divisor) > abs(dividend)) {
             end = mid - 1;
         }
         else {
@@ -20,7 +20,12 @@ int divide(int dividend, int divisor) {
             start = mid + 1;
         }
     }
-    return ans;
+    if( (divisor>0 && dividend>0) || (divisor<0 && dividend<0) ) {
+        return ans;
+    }
+    else {
+        return -ans;
+    }
 }
 
 int main() {
