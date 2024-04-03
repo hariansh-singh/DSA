@@ -6,7 +6,7 @@ void ReverseString(char arr[6]) {
     int i = 0;
     int j = strlen(arr) - 1;
 
-    while (i < j) {
+    while (i <= j) {
         swap(arr[i], arr[j]);
         i++;
         j--;
@@ -19,7 +19,9 @@ void ReverseString(char arr[6]) {
 
 int main() {
     
-    char arr[6] = {'h','a','r','r','y'};
+    char arr[20];
+    cin.getline(arr, 20);
+
     for (int k = 0; k < strlen(arr); k++) { 
         cout << arr[k] << " ";
     }
